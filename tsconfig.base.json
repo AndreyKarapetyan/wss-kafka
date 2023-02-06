@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@websocket-server/common/*": ["libs/common/src/lib/*"],
+      "@websocket-server/socket/*": ["libs/socket/src/lib/*"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

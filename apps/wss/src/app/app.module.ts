@@ -1,11 +1,11 @@
+import { KafkaController } from './controllers/kafka.controller';
+import { CommonModule } from '@websocket-server/common/common.module';
 import { Module } from '@nestjs/common';
-
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { SocketModule } from '@websocket-server/socket/socket.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [SocketModule, CommonModule],
+  controllers: [KafkaController],
+  providers: [],
 })
-export class AppModule {}
+export class AppModule { }
